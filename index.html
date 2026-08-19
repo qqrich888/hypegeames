@@ -1,387 +1,257 @@
 <!DOCTYPE html>
 <html lang="tl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TGIF GAMES HUB | Pagsusuri at Sining ng mga Larong Slots</title>
-  <style>
-    :root {
-      --bg-dark: #0f172a;
-      --bg-card: #1e293b;
-      --accent: #38bdf8;
-      --accent-gold: #f59e0b;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    }
-
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
-
-    /* Header / Nav */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 8%;
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(10px);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .logo {
-      font-size: 1.4rem;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      color: var(--accent);
-    }
-
-    nav a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin-left: 24px;
-      font-size: 0.95rem;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--text-main);
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 80px 8% 60px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .hero-content {
-      flex: 1;
-      min-width: 320px;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 6px 14px;
-      background: rgba(56, 189, 248, 0.1);
-      color: var(--accent);
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-
-    .hero-content h1 {
-      font-size: 2.6rem;
-      line-height: 1.25;
-      margin-bottom: 20px;
-    }
-
-    .hero-content p {
-      color: var(--text-muted);
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-    }
-
-    .hero-image {
-      flex: 1;
-      min-width: 320px;
-      display: flex;
-      justify-content: center;
-    }
-
-    /* Screen Mockup (Purong Visual Display) */
-    .game-mockup {
-      width: 100%;
-      max-width: 520px;
-      background: linear-gradient(145deg, #1e1b4b, #312e81);
-      border: 2px solid rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-      padding: 20px;
-    }
-
-    .mockup-header {
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-
-    .mockup-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 10px;
-    }
-
-    .reel-col {
-      background: rgba(15, 23, 42, 0.7);
-      border-radius: 8px;
-      padding: 10px 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      gap: 16px;
-      font-size: 1.6rem;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    /* Features Section */
-    .features {
-      padding: 70px 8%;
-      background: #0b1120;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .section-title h2 {
-      font-size: 2rem;
-      margin-bottom: 12px;
-    }
-
-    .section-title p {
-      color: var(--text-muted);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .grid-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: var(--bg-card);
-      padding: 30px;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(56, 189, 248, 0.3);
-    }
-
-    .card-icon {
-      font-size: 2rem;
-      margin-bottom: 16px;
-    }
-
-    .card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    /* Gallery / Showcase */
-    .gallery {
-      padding: 80px 8%;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-    }
-
-    .gallery-item {
-      background: var(--bg-card);
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .gallery-img-wrapper {
-      width: 100%;
-      height: 220px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .gallery-img-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-item:hover .gallery-img-wrapper img {
-      transform: scale(1.05);
-    }
-
-    .gallery-info {
-      padding: 24px;
-    }
-
-    .gallery-info h4 {
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-    }
-
-    .gallery-info p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-    }
-
-    .gallery-info .theme-tag {
-      font-size: 0.8rem;
-      color: var(--accent-gold);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      padding: 40px 8%;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TGIF Gaming - Pinakamahusay na Match-3 & Casual Puzzle Games</title>
+    <meta name="description" content="Tuklasin ang pinakabagong Match-3 puzzle games, game guides, tips, and casual mobile reviews sa TGIF Gaming!">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0d3b66 0%, #001e3d 100%);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
 
-  <!-- Navigasyon (Header) -->
-  <header>
-    <div class="logo">TGIF GAMES HUB</div>
-    <nav>
-      <a href="#tungkol">Tungkol</a>
-      <a href="#tampok">Mga Tampok</a>
-      <a href="#koleksyon">Mga Laro</a>
-    </nav>
-  </header>
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="bg-blue-600 text-white p-2 rounded-lg">
+                    <i class="fa-solid fa-puzzle-piece text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-tight text-blue-900 block leading-tight">TGIF GAMING</span>
+                    <span class="text-[10px] text-gray-500 font-semibold tracking-wider uppercase">Casual Mobile Hub</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-semibold text-slate-600">
+                <a href="#featured" class="hover:text-blue-600 transition">Featured Games</a>
+                <a href="#guides" class="hover:text-blue-600 transition">Tips & Guides</a>
+                <a href="#about" class="hover:text-blue-600 transition">About Us</a>
+                <button onclick="openModal('contactModal')" class="hover:text-blue-600 transition">Contact</button>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Pangunahing Bahagi (Hero Section) -->
-  <section class="hero" id="tungkol">
-    <div class="hero-content">
-      <span class="tag">PANG-OBRANG DISENYO</span>
-      <h1>Makatawag-pansing Sining at Mekanismo ng Slots</h1>
-      <p>Tuklasin ang makabagong visual rendering, dinamikong kombinasyon ng mga simbolo, at masining na tema mula sa TGIF GAMES HUB nang walang komplikasyon.</p>
+    <!-- Top Banner -->
+    <div class="bg-blue-900 text-blue-200 text-xs py-1.5 text-center font-medium px-4">
+        🎮 Pinakamahusay na Casual Games | Reviews, High Score Tips & Daily Updates!
     </div>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-14 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <span class="bg-amber-400 text-blue-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">
+                Level Up Your Fun
+            </span>
+            <h1 class="text-3xl md:text-5xl font-black mb-4 tracking-tight leading-tight">
+                Ready ka na ba sa grind? Tuklasin ang Pinakabagong Match-3 Games!
+            </h1>
+            <p class="text-slate-300 text-sm md:text-base mb-8 max-w-xl mx-auto">
+                Hanap mo ba ang best casual puzzle games para sa mobile? Basahin ang aming mga game review, combo strategies, at unlock special power-ups para mas madaling mag-clear ng stages!
+            </p>
+            <a href="#featured" class="bg-amber-400 hover:bg-amber-300 text-blue-950 font-bold px-8 py-3.5 rounded-xl shadow-lg transition duration-200 inline-block text-sm uppercase tracking-wide">
+                Explore Game Reviews
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Games Section -->
+    <section id="featured" class="max-w-6xl mx-auto px-4 py-12 flex-1">
+        <div class="text-center mb-10">
+            <h2 class="text-2xl font-bold text-slate-900 mb-2">Trending Match-3 & Casual Titles</h2>
+            <p class="text-sm text-slate-500">I-check ang mga patok na puzzle games na swak sa free time mo ngayong linggo.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Game Card 1 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition flex flex-col">
+                <div class="h-44 bg-gradient-to-tr from-pink-500 to-rose-400 flex items-center justify-center text-white">
+                    <i class="fa-solid fa-apple-whole text-6xl drop-shadow-md"></i>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold text-rose-600 bg-rose-50 px-2 py-0.5 rounded">Match-3 / Casual</span>
+                            <div class="text-amber-400 text-xs"><i class="fa-solid fa-star"></i> 4.8</div>
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Fruit Splash Deluxe</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Sobrang relaxing laruin! Match 3 or more fruits para mag-trigger ng exciting juicy blasts at high-multiplier combo chains.
+                        </p>
+                    </div>
+                    <div class="border-t pt-3 border-slate-100 flex justify-between items-center text-xs text-slate-500">
+                        <span>Tag: Single Player</span>
+                        <span class="text-blue-600 font-semibold cursor-pointer hover:underline">Read Review →</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Card 2 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition flex flex-col">
+                <div class="h-44 bg-gradient-to-tr from-amber-500 to-yellow-400 flex items-center justify-center text-white">
+                    <i class="fa-solid fa-gem text-6xl drop-shadow-md"></i>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded">Gem Puzzle</span>
+                            <div class="text-amber-400 text-xs"><i class="fa-solid fa-star"></i> 4.9</div>
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Gem Pop Challenge</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Subukan ang talas ng mata sa sparkling gems! Magandang guide at tips para makuha ang maximum points sa bawat daily quest.
+                        </p>
+                    </div>
+                    <div class="border-t pt-3 border-slate-100 flex justify-between items-center text-xs text-slate-500">
+                        <span>Tag: Strategy / Puzzle</span>
+                        <span class="text-blue-600 font-semibold cursor-pointer hover:underline">Read Review →</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Card 3 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition flex flex-col">
+                <div class="h-44 bg-gradient-to-tr from-blue-500 to-indigo-500 flex items-center justify-center text-white">
+                    <i class="fa-solid fa-candy-cane text-6xl drop-shadow-md"></i>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Arcade Match</span>
+                            <div class="text-amber-400 text-xs"><i class="fa-solid fa-star"></i> 4.7</div>
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Sweet Candy Blast</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Tuklasin kung paano mag-unlock ng special boosters at explosive line-clears para ma-solve ang challenging puzzle boards nang mabilis.
+                        </p>
+                    </div>
+                    <div class="border-t pt-3 border-slate-100 flex justify-between items-center text-xs text-slate-500">
+                        <span>Tag: High Combo</span>
+                        <span class="text-blue-600 font-semibold cursor-pointer hover:underline">Read Review →</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guide & Tips Section -->
+    <section id="guides" class="bg-slate-100 py-12 px-4 border-y border-slate-200">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6 text-center">Gameplay Strategy & High Score Tips</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                    <h4 class="font-bold text-blue-900 mb-1">1. Huwag magmadali, planuhin ang Chain Combos</h4>
+                    <p class="text-xs md:text-sm text-slate-600">
+                        Sa mga Match-3 games, ang pinakamalaking score ay nanggagaling sa cascade o consecutive clears. Laging tingnan ang ilalim na bahagi ng board bago gumawa ng move.
+                    </p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                    <h4 class="font-bold text-blue-900 mb-1">2. I-save ang Boosters para sa Mahirap na Levels</h4>
+                    <p class="text-xs md:text-sm text-slate-600">
+                        Gamitin lamang ang mga explosive items kapag malapit nang maubos ang moves para masulit ang progression nang libre.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="max-w-4xl mx-auto px-4 py-12 text-center">
+        <h3 class="text-xl font-bold text-slate-900 mb-3">Tungkol sa TGIF Gaming</h3>
+        <p class="text-sm text-slate-600 leading-relaxed max-w-2xl mx-auto">
+            Ang TGIF Gaming ay isang independent platform na nagbibigay ng pinakabagong updates, honest reviews, at game guides para sa mga mobile casual puzzle gamers sa Pilipinas. Ang aming layunin ay magbigay ng de-kalidad na libangan at tips para sa lahat.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-8 px-4 mt-auto">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center md:text-left">
+                <div class="font-bold text-white text-sm">TGIF GAMING</div>
+                <div>© 2026 TGIF Gaming. All rights reserved.</div>
+                <div class="text-[11px] text-slate-500 mt-1">This site provides mobile game reviews and casual entertainment guides only.</div>
+            </div>
+            <div class="flex space-x-6">
+                <button onclick="openModal('privacyModal')" class="hover:text-white underline">Privacy Policy</button>
+                <button onclick="openModal('termsModal')" class="hover:text-white underline">Terms of Service</button>
+                <button onclick="openModal('contactModal')" class="hover:text-white underline">Contact Us</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals (Compliance & Safety Requirements) -->
     
-    <div class="hero-image">
-      <!-- Visual Display: 5x3 Matrix ng mga Simbolo -->
-      <div class="game-mockup">
-        <div class="mockup-header">Halimbawa ng 5x3 Grid Display</div>
-        <div class="mockup-grid">
-          <div class="reel-col"><span>💎</span><span>⚡</span><span>👑</span></div>
-          <div class="reel-col"><span>🌟</span><span>💎</span><span>🔥</span></div>
-          <div class="reel-col"><span>👑</span><span>🔥</span><span>🌟</span></div>
-          <div class="reel-col"><span>⚡</span><span>👑</span><span>💎</span></div>
-          <div class="reel-col"><span>🔥</span><span>🌟</span><span>⚡</span></div>
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-xl max-w-lg w-full max-h-[80vh] flex flex-col overflow-hidden">
+            <div class="p-4 border-b flex justify-between items-center">
+                <h3 class="font-bold text-slate-900">Privacy Policy</h3>
+                <button onclick="closeModal('privacyModal')" class="text-slate-400 hover:text-slate-600 text-lg font-bold">&times;</button>
+            </div>
+            <div class="p-4 overflow-y-auto text-xs text-slate-600 space-y-3 leading-relaxed">
+                <p>Welcome sa TGIF Gaming. Pinapahalagahan namin ang iyong privacy. Ang website na ito ay nagbibigay lamang ng impormasyon at reviews tungkol sa casual mobile games.</p>
+                <p><strong>Information Collection:</strong> Hindi kami nangongolekta ng personal financial data. Ang cookies ay ginagamit lamang upang mapabuti ang user experience sa aming website.</p>
+                <p><strong>Third-Party Services:</strong> Maaaring maglaman ang website na ito ng standard analytics tools para sa website performance monitoring.</p>
+            </div>
+            <div class="p-3 border-t bg-slate-50 text-right">
+                <button onclick="closeModal('privacyModal')" class="bg-blue-600 text-white px-4 py-1.5 rounded text-xs font-semibold">Isara</button>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mga Tampok (Features) -->
-  <section class="features" id="tampok">
-    <div class="section-title">
-      <h2>Mga Natatanging Katangian</h2>
-      <p>Nakatutok sa visual feedback, maayos na takbo ng animasyon, at modernong disenyo.</p>
     </div>
 
-    <div class="grid-cards">
-      <div class="card">
-        <div class="card-icon">✨</div>
-        <h3>Tuloy-tuloy na Cascading Effects</h3>
-        <p>Kapag nabuo ang tamang linya ng mga simbolo, maayos itong naglalaho at pinapalitan ng mga bagong simbolo mula sa itaas gamit ang makinis na animasyon.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">📐</div>
-        <h3>Dinamikong Sukat ng Grid</h3>
-        <p>Kakayahang magpalit mula sa karaniwang 5x3 patungo sa mas malalawak na 6x5 matrix para sa mas kapana-panabik na layout ng sining.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">🎵</div>
-        <h3>Tema-Batikos na Tunog</h3>
-        <p>Bawat tema ay may kaakibat na orihinal na background music at sound effects na umaangkop sa ritmo ng bawat visual match.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Koleksyon ng mga Laro (Showcase na may Larawan) -->
-  <section class="gallery" id="koleksyon">
-    <div class="section-title">
-      <h2>Mga Temang Tampok sa TGIF GAMES HUB</h2>
-      <p>Sulyap sa mga malikhaing mundo at disenyo ng laro.</p>
+    <!-- Terms Modal -->
+    <div id="termsModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-xl max-w-lg w-full max-h-[80vh] flex flex-col overflow-hidden">
+            <div class="p-4 border-b flex justify-between items-center">
+                <h3 class="font-bold text-slate-900">Terms of Service</h3>
+                <button onclick="closeModal('termsModal')" class="text-slate-400 hover:text-slate-600 text-lg font-bold">&times;</button>
+            </div>
+            <div class="p-4 overflow-y-auto text-xs text-slate-600 space-y-3 leading-relaxed">
+                <p>Sa paggamit ng TGIF Gaming, sumasang-ayon ka sa mga sumusunod na patakaran:</p>
+                <p>1. Ang lahat ng nilalaman sa website na ito ay para sa informational at casual entertainment purposes lamang.</p>
+                <p>2. Ang mga trademark, logos, at larawan ay pag-aari ng kani-kanilang game developers at ginagamit dito para sa review purposes.</p>
+            </div>
+            <div class="p-3 border-t bg-slate-50 text-right">
+                <button onclick="closeModal('termsModal')" class="bg-blue-600 text-white px-4 py-1.5 rounded text-xs font-semibold">Isara</button>
+            </div>
+        </div>
     </div>
 
-    <div class="gallery-grid">
-      <!-- Item 1: Mythical Theme -->
-      <div class="gallery-item">
-        <div class="gallery-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" alt="Mitolohiyang Griyego">
+    <!-- Contact Modal -->
+    <div id="contactModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-xl max-w-md w-full overflow-hidden">
+            <div class="p-4 border-b flex justify-between items-center">
+                <h3 class="font-bold text-slate-900">Contact TGIF Gaming</h3>
+                <button onclick="closeModal('contactModal')" class="text-slate-400 hover:text-slate-600 text-lg font-bold">&times;</button>
+            </div>
+            <div class="p-4 text-xs text-slate-600 space-y-3">
+                <p>May tanong o feedback tungkol sa aming game reviews? Mag-message sa amin:</p>
+                <div class="bg-slate-100 p-3 rounded text-slate-800 font-mono">
+                    Email: support@tgifgaming.net
+                </div>
+                <p class="text-[11px] text-slate-400">Sasagutin namin ang iyong mga katanungan sa loob ng 24-48 oras.</p>
+            </div>
+            <div class="p-3 border-t bg-slate-50 text-right">
+                <button onclick="closeModal('contactModal')" class="bg-blue-600 text-white px-4 py-1.5 rounded text-xs font-semibold">Isara</button>
+            </div>
         </div>
-        <div class="gallery-info">
-          <h4>Kidlat ng Olympus</h4>
-          <p>Nagtatampok ng mga gintong templo, kidlat particle effects, at mga mitolohikal na simbolo tulad ng korona at tridente.</p>
-          <span class="theme-tag">Tema: Mitolohiya / Ginto</span>
-        </div>
-      </div>
-
-      <!-- Item 2: Cyberpunk Theme -->
-      <div class="gallery-item">
-        <div class="gallery-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Neon Cyber Matrix">
-        </div>
-        <div class="gallery-info">
-          <h4>Neon Matrix 2099</h4>
-          <p>Futuristic na kapaligiran na may kumikinang na neon graphics, holographic reels, at synth-wave visual rhythm.</p>
-          <span class="theme-tag">Tema: Sci-Fi / Cyberpunk</span>
-        </div>
-      </div>
-
-      <!-- Item 3: Deep Sea / Fantasy Theme -->
-      <div class="gallery-item">
-        <div class="gallery-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=800&q=80" alt="Lihim ng Karagatan">
-        </div>
-        <div class="gallery-info">
-          <h4>Hiwaga ng Karagatan</h4>
-          <p>Mahiwagang kaharian sa ilalim ng dagat na may bioluminescent corals, perlas, at makukulay na kristal.</p>
-          <span class="theme-tag">Tema: Pantasya / Kalikasan</span>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 TGIF GAMES HUB. Nakalaan ang lahat ng karapatan. Para sa pagsusuri ng disenyo at sining ng laro lamang.</p>
-  </footer>
-
+    <script>
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+    </script>
 </body>
 </html>
