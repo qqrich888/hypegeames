@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +36,7 @@
     .logo-wrapper {
       width: 130px;
       height: 130px;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -58,7 +58,7 @@
       letter-spacing: 1px;
       color: #0d2c54;
       text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     /* 按鈕容器 */
@@ -66,36 +66,70 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 13px;
+      gap: 12px;
     }
 
-    /* 連結按鈕樣式 */
+    /* 連結按鈕通用樣式 */
     .link-btn {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 100%;
-      padding: 16px 20px;
-      background: rgba(255, 255, 255, 0.88);
+      padding: 14px 20px;
+      background: rgba(255, 255, 255, 0.9);
       border: 1px solid rgba(255, 255, 255, 0.95);
       border-radius: 14px;
-      color: #0c356a;
       text-decoration: none;
-      font-size: 1rem;
-      font-weight: 600;
-      letter-spacing: 0.3px;
       box-shadow: 0 4px 15px rgba(22, 78, 143, 0.1);
       transition: all 0.25s ease;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
     }
 
+    .link-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0056b3;
+      margin-bottom: 3px;
+    }
+
+    .link-url {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #0c356a;
+      letter-spacing: 0.3px;
+    }
+
+    /* WEB APP 主打按鈕樣式 */
+    .featured-btn {
+      background: #ffffff;
+      border: 2px solid #ffd000;
+      box-shadow: 0 6px 20px rgba(16, 68, 133, 0.2);
+    }
+
+    .featured-btn .link-label {
+      color: #d97706;
+      font-size: 0.88rem;
+    }
+
+    .featured-btn .link-url {
+      color: #08284e;
+      font-weight: 700;
+    }
+
+    /* 懸停動態效果 */
     .link-btn:hover {
       background: #ffffff;
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(12, 53, 106, 0.2);
-      color: #0056b3;
+      box-shadow: 0 8px 22px rgba(12, 53, 106, 0.22);
       border-color: #ffffff;
+    }
+
+    .featured-btn:hover {
+      border-color: #f59e0b;
     }
 
     .link-btn:active {
@@ -114,26 +148,46 @@
     <h1 class="title">PHP LOTTO</h1>
 
     <div class="links-wrapper">
-      <a href="https://phplotto-signup.com/" target="_blank" rel="noopener noreferrer" class="link-btn">
-        phplotto-signup.com
+      <!-- WEB APP -->
+      <a href="https://phplotto-signup.com/" target="_blank" rel="noopener noreferrer" class="link-btn featured-btn">
+        <span class="link-label">WEB APP</span>
+        <span class="link-url">phplotto-signup.com</span>
       </a>
+
+      <!-- Portal 1 -->
       <a href="https://www.ysk3d.com" target="_blank" rel="noopener noreferrer" class="link-btn">
-        www.ysk3d.com
+        <span class="link-label">Portal 1</span>
+        <span class="link-url">www.ysk3d.com</span>
       </a>
-      <a href="https://sy.ysk3d.com" target="_blank" rel="noopener noreferrer" class="link-btn">
-        sy.ysk3d.com
+
+      <!-- Portal 2 -->
+      <a href="https://www.3dswin.com" target="_blank" rel="noopener noreferrer" class="link-btn">
+        <span class="link-label">Portal 2</span>
+        <span class="link-url">www.3dswin.com</span>
       </a>
-      <a href="https://mc.ysk3d.com" target="_blank" rel="noopener noreferrer" class="link-btn">
-        mc.ysk3d.com
+
+      <!-- Portal 3 -->
+      <a href="https://www.phplotto.com" target="_blank" rel="noopener noreferrer" class="link-btn">
+        <span class="link-label">Portal 3</span>
+        <span class="link-url">www.phplotto.com</span>
       </a>
-      <a href="https://ag.ysk3d.com" target="_blank" rel="noopener noreferrer" class="link-btn">
-        ag.ysk3d.com
+
+      <!-- Portal 4 -->
+      <a href="https://www.phplottos.com" target="_blank" rel="noopener noreferrer" class="link-btn">
+        <span class="link-label">Portal 4</span>
+        <span class="link-url">www.phplottos.com</span>
       </a>
-      <a href="https://pay.ysk3d.com" target="_blank" rel="noopener noreferrer" class="link-btn">
-        pay.ysk3d.com
+
+      <!-- Portal 5 -->
+      <a href="https://www.phplotto.ph" target="_blank" rel="noopener noreferrer" class="link-btn">
+        <span class="link-label">Portal 5</span>
+        <span class="link-url">www.phplotto.ph</span>
       </a>
-      <a href="https://plug.ysk3d.com" target="_blank" rel="noopener noreferrer" class="link-btn">
-        plug.ysk3d.com
+
+      <!-- Portal 6 -->
+      <a href="https://www.phplotto.net" target="_blank" rel="noopener noreferrer" class="link-btn">
+        <span class="link-label">Portal 6</span>
+        <span class="link-url">www.phplotto.net</span>
       </a>
     </div>
   </div>
